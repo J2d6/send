@@ -22,7 +22,7 @@ class Main : CliktCommand(){
         } else {
             if (file != null && address!= null ) {
                 echo("Sending file (default)...  ")
-                val sendService = port?.toInt()?.let { Send(file!!, address!!, it) }
+                val sendService = port.toInt().let { Send(file!!, address!!, it) }
                 sendService?.process()
 
             } else{
